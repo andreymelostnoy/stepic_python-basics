@@ -43,9 +43,22 @@
 #
 # print(fahrenheit(t_c))
 # print(tmp)
+#
+# a = {}
+# a = {"1": []}
+# a = {"1": [{}]}
+#
+# print(a)
 
-a = {}
-a = {"1": []}
-a = {"1": [{}]}
 
-print(a)
+class Counter:
+    def __init__(self):
+        self.count = 0
+
+
+x = Counter()
+print(x.count)
+x.count += 1
+print(x.count)
+y = Counter()
+print(y.count)
