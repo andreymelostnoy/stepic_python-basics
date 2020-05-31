@@ -22,13 +22,30 @@
 #
 # print(a)
 #
+#
+# def s(a, *vs, b=10):
+#     res = a + b
+#     for v in vs:
+#         res += v
+#     return res
+#
+#
+# print(s(21))
+#
+# t_c = 18
+# tmp = "ok"
+#
+#
+# def fahrenheit(t_c):
+#     tmp = t_c * 9 / 5
+#     return tmp
+#
+#
+# print(fahrenheit(t_c))
+# print(tmp)
 
+a = {}
+a = {"1": []}
+a = {"1": [{}]}
 
-def s(a, *vs, b=10):
-    res = a + b
-    for v in vs:
-        res += v
-    return res
-
-
-print(s(21))
+print(a)
