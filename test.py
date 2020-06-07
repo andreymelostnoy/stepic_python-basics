@@ -85,23 +85,26 @@
 # print(b.val)
 # print(c.val)
 
-graph = {'A': {'B', 'C'},
-         'B': {'A', 'D', 'E'},
-         'C': {'A', 'F'},
-         'D': {'B'},
-         'E': {'B', 'F'},
-         'F': {'C', 'E'}}
-
-
-def dfs(_graph, start):
-    visited, stack = set(), [start]
-    while stack:
-        vertex = stack.pop()
-        if vertex not in visited:
-            visited.add(vertex)
-            stack.extend(_graph[vertex] - visited)
-    return visited
-
-
-print(dfs(graph, 'A'))
-# {'E', 'D', 'F', 'A', 'C', 'B'}
+# graph = {'A': {'B', 'C'},
+#          'B': {'A', 'D', 'E'},
+#          'C': {'A', 'F'},
+#          'D': {'B'},
+#          'E': {'B', 'F'},
+#          'F': {'C', 'E'}}
+#
+#
+# def dfs(_graph, start):
+#     visited, stack = set(), [start]
+#     while stack:
+#         vertex = stack.pop()
+#         if vertex not in visited:
+#             visited.add(vertex)
+#             stack.extend(_graph[vertex] - visited)
+#     return visited
+#
+#
+# print(dfs(graph, 'A'))
+# # {'E', 'D', 'F', 'A', 'C', 'B'}
+import sys
+for path in sys.path:
+    print(path)
