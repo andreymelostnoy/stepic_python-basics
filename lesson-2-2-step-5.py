@@ -1,4 +1,6 @@
 import datetime
+
+
 date = input().split()
 for i in range(len(date)):
     date[i] = int(date[i])
