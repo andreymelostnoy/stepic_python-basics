@@ -167,3 +167,10 @@ import re
 # print(x)
 # print(x)
 # print(re.sub(pattern, r"", s))
+pattern = r'(\w)\1+'
+line1 = "attraction"
+line2 = "buzzzz"
+print(re.findall(pattern, line1))
+print(re.findall(pattern, line2))
+print(re.sub(pattern, r'\1', line1.rstrip()))
+print(re.sub(pattern, r'\1', line2.rstrip()))
