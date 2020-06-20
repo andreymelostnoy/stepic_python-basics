@@ -131,12 +131,12 @@
 # print(a, a.sort(), a)
 
 import re
-
+#
 # print(re.match())
 # print(re.search())
 # print(re.findall())
 # print(re.sub())
-
+#
 # [] -- множество подходящих символов
 # [a-zA-Z] -- указывается промежуток множества символов - от a до z и от A до Z
 # ^ -- отрицание, после него указываются символы, которые не подходят
@@ -150,7 +150,12 @@ import re
 # string = "abaaba"
 # match_object = re.match(pattern, string)
 # print(match_object)
-
-pattern = r"z.{3}z"
-x = re.search(pattern, "asdqweqwezsadzvdsfsdfwe")
-print(x)
+#
+# pattern = r"z.{3}z"
+# x = re.search(pattern, "asdqweqwezsadzvdsfsdfwe")
+# print(x)
+#
+pattern = r"\b(\w+)\1\b"
+string = "123123 is good too"
+match_object = re.match(pattern, string)
+print(match_object)
