@@ -130,4 +130,5 @@
 # a = [2, 156, 51]
 # print(a, a.sort(), a)
 
-print(7 % 5)
+template = "{capita} asdad"
+print(template.format(capita="dasd"))
