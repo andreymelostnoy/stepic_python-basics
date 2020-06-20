@@ -141,12 +141,16 @@ import re
 # [a-zA-Z] -- указывается промежуток множества символов - от a до z и от A до Z
 # ^ -- отрицание, после него указываются символы, которые не подходят
 # () -- повторение
-pattern = r"a[ab]+?c"
-string = "aaaaac, acc, adc, aFc, a.c, a-c"
-match_object = re.match(pattern, string)
-print(match_object)
+# pattern = r"a[ab]+?c"
+# string = "aaaaac, acc, adc, aFc, a.c, a-c"
+# match_object = re.match(pattern, string)
+# print(match_object)
+#
+# pattern = r"a[ab]+?a"
+# string = "abaaba"
+# match_object = re.match(pattern, string)
+# print(match_object)
 
-pattern = r"a[ab]+?a"
-string = "abaaba"
-match_object = re.match(pattern, string)
-print(match_object)
+pattern = r"z.{3}z"
+x = re.search(pattern, "asdqweqwezsadzvdsfsdfwe")
+print(x)
