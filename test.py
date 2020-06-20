@@ -155,7 +155,15 @@ import re
 # x = re.search(pattern, "asdqweqwezsadzvdsfsdfwe")
 # print(x)
 #
-pattern = r"\ba+"
-string = 'There’ll be no more "Aaaaaaaaaaaaaaa"'
-match_object = re.search(pattern, string, re.IGNORECASE)
-print(match_object)
+# pattern = r"\ba+"
+# string = 'There’ll be no more "Aaaaaaaaaaaaaaa"'
+# match_object = re.search(pattern, string, re.IGNORECASE)
+# print(match_object)
+#
+# pattern = r"\b(\w){2,}\b"
+# s = "this is a text"
+# x = re.findall(pattern, s, re.IGNORECASE)
+# match = re.match(pattern, s)
+# print(x)
+# print(x)
+# print(re.sub(pattern, r"", s))
