@@ -155,7 +155,7 @@ import re
 # x = re.search(pattern, "asdqweqwezsadzvdsfsdfwe")
 # print(x)
 #
-pattern = r"\b(\w+)\1\b"
-string = "123123 is good too"
-match_object = re.match(pattern, string)
+pattern = r"\ba+"
+string = 'There’ll be no more "Aaaaaaaaaaaaaaa"'
+match_object = re.search(pattern, string, re.IGNORECASE)
 print(match_object)
