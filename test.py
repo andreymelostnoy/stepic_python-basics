@@ -167,10 +167,54 @@ import re
 # print(x)
 # print(x)
 # print(re.sub(pattern, r"", s))
-pattern = r'(\w)\1+'
-line1 = "attraction"
-line2 = "buzzzz"
-print(re.findall(pattern, line1))
-print(re.findall(pattern, line2))
-print(re.sub(pattern, r'\1', line1.rstrip()))
-print(re.sub(pattern, r'\1', line2.rstrip()))
+# pattern = r'(\w)\1+'
+# line1 = "attraction"
+# line2 = "buzzzz"
+# print(re.findall(pattern, line1))
+# print(re.findall(pattern, line2))
+# print(re.sub(pattern, r'\1', line1.rstrip()))
+# print(re.sub(pattern, r'\1', line2.rstrip()))
+# coding=utf8
+# the above tag defines encoding for this document and is for Python 2.x compatibility
+
+# import re
+#
+# regex = r"http\w*://.+[.]html"
+#
+# test_str = "https://stepic.org/media/attachments/lesson/24472/sample0.html"
+#
+# matches = re.finditer(regex, test_str, re.MULTILINE)
+# m = re.match(regex, test_str)
+# print(m)
+# print(m.group())
+#
+# for matchNum, match in enumerate(matches, start=1):
+#
+#     print("Match {matchNum} was found at {start}-{end}: {match}".format(
+#         matchNum=matchNum, start=match.start(), end=match.end(),
+#         match=match.group()))
+#
+#     for groupNum in range(0, len(match.groups())):
+#         groupNum = groupNum + 1
+#
+#         print("Group {groupNum} found at {start}-{end}: {group}".format(
+#             groupNum=groupNum, start=match.start(groupNum),
+#             end=match.end(groupNum), group=match.group(groupNum)))
+#
+# # Note: for Python 2.7 compatibility, use ur"" to prefix the regex and u"" to prefix the test string and substitution.
+
+import re
+
+r = """
+<a href="http://stepic.org/courses">
+<a href='https://stepic.org'>
+<a href='http://neerc.ifmo.ru:1345'>
+<a href="ftp://mail.ru/distib" >
+<a href="ya.ru">
+<a href="www.ya.ru">
+<a href="../skip_relative_links">
+"""
+
+p1 = r'<a.+href=[\'\"][\w-]*(://|\.)?'
+links = re.match(p1, r)
+print(links)
