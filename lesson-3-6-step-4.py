@@ -10,7 +10,7 @@ token = "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJyb2xlcyI6IiIsInN1YmplY3Rf" \
 headers = {"X-Xapp-Token": token}
 artists = {}
 
-with open("artists.txt", "r", encoding="utf-8") as file:
+with open("dataset_24476_4.txt", "r", encoding="utf-8") as file:
     for artist in file:
         r = requests.get(api_url.format(artist=artist.strip()), headers=headers)
         j = json.loads(r.text)
