@@ -14,4 +14,3 @@ crimes = dict((x, crimes_2015.count(x))
 for crime in sorted(crimes.items(), key=lambda para: para[1], reverse=True):
     print(crime)
     break
-# print(crimes)
